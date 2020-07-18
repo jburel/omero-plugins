@@ -5,6 +5,11 @@ sudo: required
 services:
   - docker
 
+addons:
+  apt:
+    packages:
+      ant
+
 env:
 - REPO=omero-iviewer STAGE=app
 
