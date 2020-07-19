@@ -5,17 +5,12 @@ sudo: required
 services:
   - docker
 
-addons:
-  apt:
-    packages:
-      ant
-
 env:
 - REPO=omero-iviewer STAGE=app
 
 
 script:
-- cd $REPO && ln -s ../omero-test-infra .omero && .omero/docker $STAGE
+- cd $REPO && cp ../omero-test-infra/.omero . && .omero/docker $STAGE
 
 matrix:
   allow_failures:
