@@ -32,8 +32,8 @@
 	branch = master
 [submodule "omero-iviewer"]
 	path = omero-iviewer
-	url = git://github.com/ome/omero-iviewer
-	branch = master
+	url = git://github.com/jburel/omero-iviewer
+	branch = test
 [submodule "omero-gallery"]
 	path = omero-gallery
 	url = git://github.com/ome/omero-gallery
