@@ -10,7 +10,7 @@ env:
 
 
 script:
-- cd $REPO && cp ../omero-test-infra/.omero . && .omero/docker $STAGE
+- cd $REPO && mkdir .omero && cp ../omero-test-infra/ .omero && .omero/docker $STAGE
 
 matrix:
   allow_failures:
