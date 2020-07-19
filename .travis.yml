@@ -8,8 +8,11 @@ services:
 env:
 - REPO=omero-iviewer STAGE=app
 
+before_install:
+  - cd $REPO && mkdir .omero && cp -r ../omero-test-infra .omero
+
 script:
-- cd $REPO && mkdir .omero && cp -r ../omero-test-infra .omero && .omero/docker $STAGE
+  - .omero/docker $STAGE
 
 matrix:
   allow_failures:
